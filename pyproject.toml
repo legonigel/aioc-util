@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aioc-util"
+version = "0.1.0"
+description = "A utility for configuring the AIOC device"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Hrafnkell Eiríksson", email = "tf3hr@gmail.com"},
+]
+dependencies = [
+  "hid",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+aioc-util = "aioc_util.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/hrafnkelle/aioc-util"
