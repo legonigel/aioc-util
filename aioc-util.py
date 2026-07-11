@@ -613,7 +613,12 @@ def main():
 
     if args.reboot:
         print("Rebooting device...")
-        cmd(aioc, Command.REBOOT)
+        sys.stdout.flush()
+        try:
+            cmd(aioc, Command.REBOOT)
+        except Exception:
+            pass
+        os._exit(0)
 
 
 if __name__ == "__main__":
